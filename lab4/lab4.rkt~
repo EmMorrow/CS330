@@ -1,0 +1,6 @@
+#lang racket
+(define (default-parms f values)
+  (lambda args
+    (append args (list-tail values (length (args))))
+    (apply f args)))
+  

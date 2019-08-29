@@ -1,0 +1,5 @@
+
+function interp(cs::AbstractString)
+	lxd = Lexer.lex( cs )
+	ast = parse( lxd )
+	return calc( ast )
